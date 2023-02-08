@@ -63,21 +63,106 @@ The component also requires a  `render()`  method, this method returns HTML.
 1. ***Why use props ?***
    The data can be passed from one component to another component using these props, similar to how the arguments are passed in a function.
 
-## Rename a file
+## State
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+- The state is **a built-in React object that is used to contain data
+  or information about the component**.
+  State can only be used in class components
 
-## Delete a file
+## Event Handling
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
+- Just like HTML DOM events, React can perform actions based on user
+  events.
+- React has the same events as HTML: **click**, **change**,  **mouseover** etc.
 
-## Export a file
+## Adding Events
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+React events are written in camelCase syntax:
 
-# Synchronization
+**`onClick`**  instead of  **`onclick`**.
 
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
+React event handlers are written inside curly braces:
+
+**`onClick={shoot}`** instead of  **`onClick="shoot()"`**.
+
+### React:
+
+```jsx
+<button onClick={shoot}>Take the Shot!</button>
+```
+
+### HTML:
+
+```html
+<button onclick="shoot()">Take the Shot!</button>
+```
+
+### Example:
+
+Put the  `shoot`  function inside the  `Football`  component:
+
+```jsx
+function Football() {
+  const shoot = () => {
+    alert("Great Shot!");
+  }
+
+  return (
+    <button onClick={shoot}>Take the shot!</button>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<Football />);
+```
+
+## Arrow Functions
+
+An  **arrow function expression**  is a compact alternative to a traditional  function expression :-
+
+- Arrow functions don't have their own bindings to  `this`,  `arguments`, or  `super`, and should not be used as  `methods`.
+- Arrow functions cannot be used as constructors. Calling them with  `new`  throws a  `TypeError`They also don't have access to the  `new.target` keyword.
+- Arrow functions cannot use  `yield`  within their body and cannot be created as generator functions.
+
+### Before Arrow:
+
+    hello = function() {
+    return  "Hello World!";
+    }
+
+### After Arrow Function:
+
+    hello = () => {
+    return  "Hello World!";
+    }
+
+## What About  `this`?
+
+The handling of  `this`  is also different in arrow functions compared to regular functions.
+
+In short, with arrow functions there are no binding of  `this`.
+
+In regular functions the  `this`  keyword represented the object that called the function, which could be the window, the document, a button or whatever.
+
+With arrow functions the  `this`  keyword  _always_  represents the object that defined the arrow function.
+
+# *Life - Cycle Methods*
+
+In my words, life - cycle methods is like **A Person** :-
+
+- Born
+- Study
+- Job
+- Marriage
+- Death
+
+These methods one person will followed by same as in life cycle methods there are some life cycle methods in React Like:-
+
+    1. Component banta hai
+	 2. Update hota hai
+	 3. Kuch data ko recieve krta hai
+	 4. or phir vo unmount hota hai
+
 
 There are two types of synchronization and they can complement each other:
 
