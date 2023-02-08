@@ -161,19 +161,39 @@ These methods one person will followed by same as in life cycle methods there ar
     1. Component banta hai
 	 2. Update hota hai
 	 3. Kuch data ko recieve krta hai
-	 4. or phir vo unmount hota hai
+	 4. or phir vo unmount hota hai![lCM](https://user-images.githubusercontent.com/97086871/217489079-67d74da9-0620-4111-a375-9c6d9e37da80.png)
 
+#### Mounting
 
-There are two types of synchronization and they can complement each other:
+These methods are called in the following order when an instance of a component is being created and inserted into the DOM:
 
-- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
+- **`constructor()`**
+- **`static getDerivedStateFromProps()`**
+- **`render()`**
+- **`componentDidMount()`**
 
-  > To start syncing your workspace, just sign in with Google in the menu.
-  >
-- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
+#### Updating
 
-  > Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
-  >
+An update can be caused by changes to props or state. These methods are called in the following order when a component is being re-rendered:
+
+- **`static getDerivedStateFromProps()`**
+- **`shouldComponentUpdate()`**
+- **`render()`**
+- **`getSnapshotBeforeUpdate()`**
+- **`componentDidUpdate()`**
+
+#### Unmounting
+
+This method is called when a component is being removed from the DOM:
+
+- **`componentWillUnmount()`**
+
+#### Error Handling
+
+These methods are called when there is an error during rendering, in a lifecycle method, or in the constructor of any child component.
+
+- **`static getDerivedStateFromError()`**
+- **`componentDidCatch()`**
 
 ## Open a file
 
