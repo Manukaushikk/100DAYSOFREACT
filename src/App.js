@@ -6,27 +6,42 @@ import Hideshow from "./Hideshow";
 import Profilee from "./Profilee";
 import ComponentDidMount from "./LifeCycleMethods/ComponentDidMount";
 import ComponentDidUpdate from "./LifeCycleMethods/ComponentDidUpdate";
-function App() {
-  return (
-    <div className="App">
-      <h1>Manu Kaushik</h1>
-      {/* <User /> */}
-      {/* <Profile text={{ name: 'manu' }} data="Profile data" /> */}
-      {/* <Hideshow /> */}
-      {/* <Profilee /> */}
-      {/* <ComponentDidMount /> */}
-      <ComponentDidUpdate />
-      {/* {
+import ComponentWillUnmount from "./LifeCycleMethods/ComponentWillUnmount";
+class App extends React.Component {
+  // constructor() {
+  //   super()
+  //   this.state = {
+  //     toggle: true
+
+  //   }
+  // }
+  render() {
+    return (
+      <div className="App">
+        <h1>Manu Kaushik</h1>
+        {/* <User /> */}
+        {/* <Profile text={{ name: 'manu' }} data="Profile data" /> */}
+        {/* <Hideshow /> */}
+        {/* <Profilee /> */}
+        {/* <ComponentDidMount /> */}
+        {/* <ComponentDidUpdate /> */}
+        {/* 
+        {
+          this.state.toggle ?
+            <ComponentWillUnmount /> : null
+
+        }
+        <button onClick={() => { this.setState({ toggle: !this.state.toggle }) }}>Delete ComponentWillUnmount</button> */}
+        {/* {
         React.createElement(
           'h2',
           'null',
           'Hello Manu kaushik'
         )
       } */}
-    </div>
-
-  )
-
+      </div>
+    )
+  }
 }
 
 export default App;
