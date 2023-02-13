@@ -12,6 +12,7 @@ import UseEffect from "./Hooks/UseEffect";
 import Form from "./Forms Handling/Form";
 import FormValidation from "./Forms Handling/FormValidation";
 import Listing from "./Listing with map function/Listing";
+import Style from "./Styling/Style";
 class App extends React.Component {
   // constructor() {
   //   super()
@@ -25,8 +26,12 @@ class App extends React.Component {
       <div className="App">
         <h1>Manu Kaushik</h1>
 
+        {/* Styling 🎨 */}
+        <Style data="apply" />{ /*agar apply hai toh hee change hua hai*/}
+        {/* <Style /> */}
+
         {/* Listing with Map */}
-        <Listing />
+        {/* <Listing /> */}
 
         {/* Form Handling ⬇️   */}
         {/* <Form /> */}
