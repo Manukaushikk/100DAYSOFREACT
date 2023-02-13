@@ -9,6 +9,7 @@ import ComponentDidUpdate from "./LifeCycleMethods/ComponentDidUpdate";
 import ComponentWillUnmount from "./LifeCycleMethods/ComponentWillUnmount";
 import UseState from "./Hooks/UseState";
 import UseEffect from "./Hooks/UseEffect";
+import Form from "./Forms Handling/Form";
 class App extends React.Component {
   // constructor() {
   //   super()
@@ -22,12 +23,13 @@ class App extends React.Component {
       <div className="App">
         <h1>Manu Kaushik</h1>
 
+        {/* Form Handling 🪝⬇️   */}
+        <Form />
+        {/* ⬆️ */}
+
         {/* HOOKS 🪝⬇️   */}
         {/* <UseState /> */}
-        <UseEffect />
-
-
-        {/* ⬆️ */}
+        {/* <UseEffect /> */}
 
 
         {/* <User /> */}
