@@ -8,6 +8,7 @@ import ComponentDidMount from "./LifeCycleMethods/ComponentDidMount";
 import ComponentDidUpdate from "./LifeCycleMethods/ComponentDidUpdate";
 import ComponentWillUnmount from "./LifeCycleMethods/ComponentWillUnmount";
 import UseState from "./Hooks/UseState";
+import UseEffect from "./Hooks/UseEffect";
 class App extends React.Component {
   // constructor() {
   //   super()
@@ -20,7 +21,15 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Manu Kaushik</h1>
-        <UseState />
+
+        {/* HOOKS 🪝⬇️   */}
+        {/* <UseState /> */}
+        <UseEffect />
+
+
+        {/* ⬆️ */}
+
+
         {/* <User /> */}
         {/* <Profile text={{ name: 'manu' }} data="Profile data" /> */}
         {/* <Hideshow /> */}
