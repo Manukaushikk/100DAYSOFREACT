@@ -1,4 +1,3 @@
-
 # Welcome to *React*
 
 React is a **Open - Source Frontend JavaScript library**  which is used for building user interface especially for **Single Page Applications**.
@@ -161,7 +160,9 @@ These methods one person will followed by same as in life cycle methods there ar
     1. Component banta hai
 	 2. Update hota hai
 	 3. Kuch data ko recieve krta hai
-	 4. or phir vo unmount hota hai![lCM](https://user-images.githubusercontent.com/97086871/217489079-67d74da9-0620-4111-a375-9c6d9e37da80.png)
+	 4. or phir vo unmount hota hai
+
+![lCM](https://user-images.githubusercontent.com/97086871/217489079-67d74da9-0620-4111-a375-9c6d9e37da80.png)
 
 #### Mounting
 
