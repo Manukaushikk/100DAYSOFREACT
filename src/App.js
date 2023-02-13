@@ -10,6 +10,7 @@ import ComponentWillUnmount from "./LifeCycleMethods/ComponentWillUnmount";
 import UseState from "./Hooks/UseState";
 import UseEffect from "./Hooks/UseEffect";
 import Form from "./Forms Handling/Form";
+import FormValidation from "./Forms Handling/FormValidation";
 class App extends React.Component {
   // constructor() {
   //   super()
@@ -24,7 +25,8 @@ class App extends React.Component {
         <h1>Manu Kaushik</h1>
 
         {/* Form Handling 🪝⬇️   */}
-        <Form />
+        {/* <Form /> */}
+        <FormValidation />
         {/* ⬆️ */}
 
         {/* HOOKS 🪝⬇️   */}
