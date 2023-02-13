@@ -11,6 +11,7 @@ import UseState from "./Hooks/UseState";
 import UseEffect from "./Hooks/UseEffect";
 import Form from "./Forms Handling/Form";
 import FormValidation from "./Forms Handling/FormValidation";
+import Listing from "./Listing with map function/Listing";
 class App extends React.Component {
   // constructor() {
   //   super()
@@ -24,9 +25,12 @@ class App extends React.Component {
       <div className="App">
         <h1>Manu Kaushik</h1>
 
-        {/* Form Handling 🪝⬇️   */}
+        {/* Listing with Map */}
+        <Listing />
+
+        {/* Form Handling ⬇️   */}
         {/* <Form /> */}
-        <FormValidation />
+        {/* <FormValidation /> */}
         {/* ⬆️ */}
 
         {/* HOOKS 🪝⬇️   */}
