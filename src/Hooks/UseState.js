@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-function Basichooks() {
+function UseState() {
 
     const [count, setCount] = useState(0)
     return (
@@ -12,4 +12,4 @@ function Basichooks() {
     )
 }
 
-export default Basichooks
+export default UseState

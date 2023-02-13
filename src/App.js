@@ -7,7 +7,7 @@ import Profilee from "./Profilee";
 import ComponentDidMount from "./LifeCycleMethods/ComponentDidMount";
 import ComponentDidUpdate from "./LifeCycleMethods/ComponentDidUpdate";
 import ComponentWillUnmount from "./LifeCycleMethods/ComponentWillUnmount";
-import Basichooks from "./Hooks/Basichooks";
+import UseState from "./Hooks/UseState";
 class App extends React.Component {
   // constructor() {
   //   super()
@@ -20,7 +20,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Manu Kaushik</h1>
-        <Basichooks />
+        <UseState />
         {/* <User /> */}
         {/* <Profile text={{ name: 'manu' }} data="Profile data" /> */}
         {/* <Hideshow /> */}
