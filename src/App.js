@@ -13,6 +13,10 @@ import Form from "./Forms Handling/Form";
 import FormValidation from "./Forms Handling/FormValidation";
 import Listing from "./Listing with map function/Listing";
 import Style from "./Styling/Style";
+import About from "./Routers/About";
+import Home from "./Routers/Home";
+import Forms from "./Routers/Forms";
+import { Link, Route, Router, Routes } from "react-router-dom";
 class App extends React.Component {
   // constructor() {
   //   super()
@@ -26,8 +30,20 @@ class App extends React.Component {
       <div className="App">
         <h1>Manu Kaushik</h1>
 
+        {/* Routing */}
+        <Routes>
+
+
+          <Route exact path="/" element={<Home />}></Route>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/forms" element={<Forms />}></Route>
+          {/* <About />
+          <Home />
+          <Forms /> */}
+        </Routes>
+
         {/* Styling 🎨 */}
-        <Style data="apply" />{ /*agar apply hai toh hee change hua hai*/}
+        {/* <Style data="apply" /> agar apply hai toh hee change hua hai  */}
         {/* <Style /> */}
 
         {/* Listing with Map */}
