@@ -17,6 +17,7 @@ import About from "./Routers/About";
 import Home from "./Routers/Home";
 import Forms from "./Routers/Forms";
 import { Link, Route, Router, Routes } from "react-router-dom";
+import CallsApi from "./Fetch API/CallsApi";
 class App extends React.Component {
   // constructor() {
   //   super()
@@ -30,17 +31,20 @@ class App extends React.Component {
       <div className="App">
         <h1>Manu Kaushik</h1>
 
+        {/* Fetch API */}
+        <CallsApi />
+
         {/* Routing */}
-        <Routes>
 
-
+        {/* <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/forms" element={<Forms />}></Route>
-          {/* <About />
+          <About />
           <Home />
-          <Forms /> */}
-        </Routes>
+          <Forms />
+        </Routes> */}
+
 
         {/* Styling 🎨 */}
         {/* <Style data="apply" /> agar apply hai toh hee change hua hai  */}
