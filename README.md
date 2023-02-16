@@ -223,12 +223,8 @@ There are 3 rules for hooks:
 
 * The current state.
 * A function that updates the state.
-
-
-
 * The `useState` Hook can be used to keep track of strings, numbers, booleans, arrays, objects, and any combination of these!
 * We could create multiple state Hooks to track individual values.
-
 
 ### Updating Objects and Arrays in State
 
@@ -240,9 +236,16 @@ If we only called `setCar({color: "blue"})`, this would remove the brand, model,
 
 We can use the JavaScript spread operator to help us.
 
-
 Because we need the current value of state, we pass a function into our `setCar` function. This function receives the previous value.
 
 We then return an object, spreading the `previousState` and overwriting only the color.
 
 ## UseEffect
+
+
+* The `useEffect` Hook allows you to perform side effects in your components.
+* Some examples of side effects are: fetching data, directly updating the DOM, and timers.
+* `useEffect` accepts two arguments. The second argument is optional.
+* `useEffect(<function>, <dependency>)`
+
+**`useEffect` runs on every render. That means that when the count changes, a render happens, which then triggers another effect.**

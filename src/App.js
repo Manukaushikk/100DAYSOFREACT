@@ -18,6 +18,7 @@ import Home from "./Routers/Home";
 import Forms from "./Routers/Forms";
 import { Link, Route, Router, Routes } from "react-router-dom";
 import CallsApi from "./Fetch API/CallsApi";
+import Ref from "./UseRef/Ref";
 class App extends React.Component {
   // constructor() {
   //   super()
@@ -31,8 +32,11 @@ class App extends React.Component {
       <div className="App">
         <h1>Manu Kaushik</h1>
 
+        {/* Use Ref's */}
+        <Ref />
+
         {/* Fetch API */}
-        <CallsApi />
+        {/* <CallsApi /> */}
 
         {/* Routing */}
 
