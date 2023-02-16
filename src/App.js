@@ -19,6 +19,8 @@ import Forms from "./Routers/Forms";
 import { Link, Route, Router, Routes } from "react-router-dom";
 import CallsApi from "./Fetch API/CallsApi";
 import Ref from "./UseRef/Ref";
+import Userr from "./ErrorBoundary/Userr";
+import ErrorBound from "./ErrorBoundary/ErrorBound";
 class App extends React.Component {
   // constructor() {
   //   super()
@@ -32,8 +34,12 @@ class App extends React.Component {
       <div className="App">
         <h1>Manu Kaushik</h1>
 
+        {/* Error Boundary */}
+
+        <ErrorBound > <Userr /> </ErrorBound>
+
         {/* Use Ref's */}
-        <Ref />
+        {/* <Ref /> */}
 
         {/* Fetch API */}
         {/* <CallsApi /> */}
