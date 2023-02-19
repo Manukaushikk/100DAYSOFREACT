@@ -25,7 +25,11 @@ import Main from "./PureComponent/Main";
 import Memo from "./Memo/Memo";
 import UncontrolForm from "./Components/UncontrolForm";
 import Controlled from "./Components/Controlled";
-
+// import Lazzz from "./LazyLoading/Lazzz";
+import { lazy } from "react";
+import { Suspense } from "react";
+const Lazzz = lazy(() => import('./LazyLoading/Lazzz.js'))
+const Aboutt = lazy(() => import('./LazyLoading/Aboutt.js'))
 // Memo ⏬
 // const App = () => {
 // const [count, setCount] = useState(0);
@@ -42,6 +46,18 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>Manu Kaushik</h1>
+
+        {/* Lazy Loading */}
+        <Suspense fallback={<div>Please wait..... 🍷</div>}>
+          <h6>LazyLoading</h6>
+          <Lazzz />
+        </Suspense>
+
+        <Suspense fallback={<div>Please wait.....About Just COming😎</div>}>
+          <h6>LazyLoading</h6>
+          <Aboutt />
+        </Suspense>
+
         {/* Components */}
         {/* <UncontrolForm /> */}
         {/* <Controlled /> */}
