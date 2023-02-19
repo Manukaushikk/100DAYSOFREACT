@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 import Profile from "./Profile";
 import User from "./User";
@@ -21,7 +21,14 @@ import CallsApi from "./Fetch API/CallsApi";
 import Ref from "./UseRef/Ref";
 import Userr from "./ErrorBoundary/Userr";
 import ErrorBound from "./ErrorBoundary/ErrorBound";
-class App extends React.Component {
+import Main from "./PureComponent/Main";
+import Memo from "./Memo/Memo";
+
+// Memo ⏬
+const App = () => {
+  const [count, setCount] = useState(0);
+  const [data, setData] = useState(100);
+  // class App extends React.Component {
   // constructor() {
   //   super()
   //   this.state = {
@@ -29,24 +36,32 @@ class App extends React.Component {
 
   //   }
   // }
-  render() {
-    return (
-      <div className="App">
-        <h1>Manu Kaushik</h1>
+  // render() {
+  return (
+    <div className="App">
+      <h1>Manu Kaushik</h1>
 
-        {/* Error Boundary */}
+      {/* Memo */}
+      Memo with React {count}
+      <Memo data={data} />
+      <button onClick={() => setCount(count + 1)}>Count</button>
+      <button onClick={() => setData(data + 1)}>Data</button>
+      {/* Pure Component */}
+      {/* <Main /> */}
 
-        <ErrorBound > <Userr /> </ErrorBound>
+      {/* Error Boundary */}
 
-        {/* Use Ref's */}
-        {/* <Ref /> */}
+      {/* <ErrorBound > <Userr /> </ErrorBound> */}
 
-        {/* Fetch API */}
-        {/* <CallsApi /> */}
+      {/* Use Ref's */}
+      {/* <Ref /> */}
 
-        {/* Routing */}
+      {/* Fetch API */}
+      {/* <CallsApi /> */}
 
-        {/* <Routes>
+      {/* Routing */}
+
+      {/* <Routes>
           <Route exact path="/" element={<Home />}></Route>
           <Route path="/about" element={<About />}></Route>
           <Route path="/forms" element={<Forms />}></Route>
@@ -56,46 +71,46 @@ class App extends React.Component {
         </Routes> */}
 
 
-        {/* Styling 🎨 */}
-        {/* <Style data="apply" /> agar apply hai toh hee change hua hai  */}
-        {/* <Style /> */}
+      {/* Styling 🎨 */}
+      {/* <Style data="apply" /> agar apply hai toh hee change hua hai  */}
+      {/* <Style /> */}
 
-        {/* Listing with Map */}
-        {/* <Listing /> */}
+      {/* Listing with Map */}
+      {/* <Listing /> */}
 
-        {/* Form Handling ⬇️   */}
-        {/* <Form /> */}
-        {/* <FormValidation /> */}
-        {/* ⬆️ */}
+      {/* Form Handling ⬇️   */}
+      {/* <Form /> */}
+      {/* <FormValidation /> */}
+      {/* ⬆️ */}
 
-        {/* HOOKS 🪝⬇️   */}
-        {/* <UseState /> */}
-        {/* <UseEffect /> */}
+      {/* HOOKS 🪝⬇️   */}
+      {/* <UseState /> */}
+      {/* <UseEffect /> */}
 
 
-        {/* <User /> */}
-        {/* <Profile text={{ name: 'manu' }} data="Profile data" /> */}
-        {/* <Hideshow /> */}
-        {/* <Profilee /> */}
-        {/* <ComponentDidMount /> */}
-        {/* <ComponentDidUpdate /> */}
-        {/* 
+      {/* <User /> */}
+      {/* <Profile text={{ name: 'manu' }} data="Profile data" /> */}
+      {/* <Hideshow /> */}
+      {/* <Profilee /> */}
+      {/* <ComponentDidMount /> */}
+      {/* <ComponentDidUpdate /> */}
+      {/* 
         {
           this.state.toggle ?
             <ComponentWillUnmount /> : null
 
         }
         <button onClick={() => { this.setState({ toggle: !this.state.toggle }) }}>Delete ComponentWillUnmount</button> */}
-        {/* {
+      {/* {
         React.createElement(
           'h2',
           'null',
           'Hello Manu kaushik'
         )
       } */}
-      </div>
-    )
-  }
+    </div>
+  )
 }
+// }
 
 export default App;
