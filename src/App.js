@@ -44,7 +44,7 @@ class App extends React.Component {
         <h1>Manu Kaushik</h1>
         {/* Components */}
         {/* <UncontrolForm /> */}
-        <Controlled />
+        {/* <Controlled /> */}
 
         {/* Memo */}
         {/* Memo with React {count} */}
